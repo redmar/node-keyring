@@ -378,14 +378,6 @@ dependencies = [
 
 [[package]]
 name = "keyring"
-version = "0.1.0"
-dependencies = [
- "keyring 1.1.2",
- "neon",
-]
-
-[[package]]
-name = "keyring"
 version = "1.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "894a58932447ecc241a3545135bdfd26ac0e611295b391904ce0b085310ab38c"
@@ -495,6 +487,14 @@ dependencies = [
  "cfg-if 0.1.10",
  "libc",
  "void",
+]
+
+[[package]]
+name = "node-keyring"
+version = "0.3.0"
+dependencies = [
+ "keyring",
+ "neon",
 ]
 
 [[package]]
