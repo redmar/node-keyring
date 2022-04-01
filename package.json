@@ -1,19 +1,22 @@
 {
   "name": "node-keyring",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Bindings to native Mac/Linux/Windows password APIs",
   "main": "index.node",
   "scripts": {
     "build": "cargo-cp-artifact -nc index.node -- cargo build --message-format=json-render-diagnostics",
     "build-debug": "npm run build --",
-    "build-release": "npm run build -- --release",
+    "build-release": "run-script-os",
+    "build-release:default": "npm run build -- --release",
+    "build-release:macos": "cargo build --target=x86_64-apple-darwin --release && cargo build --target=aarch64-apple-darwin --release && lipo -create target/x86_64-apple-darwin/release/libnode_keyring.dylib target/aarch64-apple-darwin/release/libnode_keyring.dylib -output index.node",
     "install": "npm run build-release",
     "test": "cargo test"
   },
   "author": "rjk",
   "license": "MIT",
   "devDependencies": {
-    "cargo-cp-artifact": "^0.1"
+    "cargo-cp-artifact": "^0.1",
+    "run-script-os": "^1.1.6"
   },
   "keywords": [
     "keychain"
