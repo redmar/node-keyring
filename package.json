@@ -1,6 +1,6 @@
 {
-  "name": "keyring",
-  "version": "0.1.0",
+  "name": "node-keyring",
+  "version": "0.2.0",
   "description": "Bindings to native Mac/Linux/Windows password APIs",
   "main": "index.node",
   "scripts": {
