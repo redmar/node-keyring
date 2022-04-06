@@ -25,7 +25,6 @@ jobs:
             target: 'x86_64-apple-darwin'
             setup: |
               brew install nasm
-              rustup target add aarch64-apple-darwin
             build: |
               rustc --print target-cpus
               yarn build-release
@@ -85,6 +84,12 @@ jobs:
           profile: minimal
           override: true
           target: ${{ matrix.settings.target }}
+
+      - name: Install arm rust for universal build
+        if: matrix.settings.host == 'macos-latest'
+        uses: actions-rs/toolchain@v1
+        with:
+          target: aarch64-apple-darwin
 
       - name: Generate Cargo.lock
         uses: actions-rs/cargo@v1
