@@ -174,3 +174,8 @@ jobs:
           npm publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Commit native packages versions
+        run: |
+          git show
+          git push
