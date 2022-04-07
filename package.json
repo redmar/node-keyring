@@ -9,6 +9,7 @@
     "build-release": "run-script-os",
     "build-release:default": "npm run build -- --release",
     "build-release:macos": "cargo build --target=x86_64-apple-darwin --release && cargo build --target=aarch64-apple-darwin --release && lipo -create target/x86_64-apple-darwin/release/libnode_keyring.dylib target/aarch64-apple-darwin/release/libnode_keyring.dylib -output index.node",
+    "install": "npm run build-release",
     "test": "cargo test"
   },
   "author": "rjk",
