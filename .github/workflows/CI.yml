@@ -165,7 +165,7 @@ jobs:
           npm version patch
           npm publish
           cd ../..
-          cd npm/win32-x64-gnu
+          cd npm/win32-x64-msvc
           npm version patch
           npm publish
           cd ../..
