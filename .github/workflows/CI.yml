@@ -153,26 +153,24 @@ jobs:
         shell: bash
 
       - name: 'Move artifacts in place of native npm packages'
-        run: mv artifacts/bindings-x86_64-apple-darwin/node-keyring.x86_64-apple-darwin.node npm/darwin-universal/node-keyring.darwin-universal.node
+        run: |
+          mv artifacts/bindings-x86_64-apple-darwin/node-keyring.x86_64-apple-darwin.node npm/darwin-universal/node-keyring.darwin-universal.node
+          mv artifacts/bindings-x86_64-pc-windows-msvc/node-keyring.x86_64-pc-windows-msvc.node npm/win32-x64-gnu/node-keyring.win32-x64-msvc.node 
+          mv artifacts/bindings-x86_64-unknown-linux-gnu/node-keyring.x86_64-unknown-linux-gnu.node npm/linux-x64-gnu/node-keyring.linux-x64-gnu.node
 
       - name: 'Publish native npm packages'
         run: |
-          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
           cd npm/darwin-universal
+          npm version patch
+          npm publish
+          cd ../..
+          cd npm/win32-x64-gnu
+          npm version patch
+          npm publish
+          cd ../..
+          cd npm/linux-x64-gnu
           npm version patch
           npm publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-# TODO
-#      move
-#       artifacts/bindings-x86_64-apple-darwin/node-keyring.x86_64-apple-darwin.node
-#         npm/darwin-universal/node-keyring.darwin-universal.node
-#
-#       artifacts/bindings-x86_64-pc-windows-msvc/node-keyring.x86_64-pc-windows-msvc.node
-#         npm/win32-x64-gnu/node-keyring.win32-x64-msvc.node
-#
-#       artifacts/bindings-x86_64-unknown-linux-gnu/node-keyring.x86_64-unknown-linux-gnu.node
-#         npm/linux-x64-gnu/node-keyring.linux-x64-gnu.node
-
-# then publish on npm
-#
