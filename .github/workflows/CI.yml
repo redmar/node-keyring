@@ -93,7 +93,7 @@ jobs:
           key: ${{ matrix.settings.target }}-yarn-cache-node-16
 
       - name: Install dependencies
-        run: yarn install --immutable --mode=skip-build --no-optional
+        run: yarn install --immutable --mode=skip-build
 
 #      - name: Pull latest image
 #        run: ${{ matrix.settings.docker }}
