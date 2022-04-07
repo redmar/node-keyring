@@ -14,10 +14,6 @@
   },
   "author": "rjk",
   "license": "MIT",
-  "devDependencies": {
-    "cargo-cp-artifact": "^0.1",
-    "run-script-os": "^1.1.6"
-  },
   "keywords": [
     "keychain"
   ],

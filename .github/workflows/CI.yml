@@ -92,6 +92,9 @@ jobs:
           path: .yarn/cache
           key: ${{ matrix.settings.target }}-yarn-cache-node-16
 
+      - name: Install run-script-os and cargo-cp-artifact
+        run: yarn global add run-script-os cargo-cp-artifact
+
       - name: Install dependencies
         run: yarn install --immutable --mode=skip-build
 
