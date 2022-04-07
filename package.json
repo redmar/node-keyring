@@ -20,10 +20,5 @@
   },
   "keywords": [
     "keychain"
-  ],
-  "optionalDependencies": {
-    "node-keyring-win32-x64-msvc": "0.4.0",
-    "node-keyring-linux-x64-gnu": "0.4.0",
-    "node-keyring-darwin-universal": "0.4.0"
-  }
+  ]
 }
