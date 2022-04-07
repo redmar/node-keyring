@@ -1,0 +1,35 @@
+{
+  "name": "node-keyring-linux-x64-gnu",
+  "version": "0.4.0",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "node-keyring.linux-x64-gnu.node",
+  "files": [
+    "node-keyring.linux-x64-gnu.node"
+  ],
+  "description": "Rust keyring binding",
+  "keywords": [
+    "keychain"
+  ],
+  "author": "rjk",
+  "homepage": "https://github.com/redmar/node-keyring",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redmar/node-keyring.git"
+  },
+  "bugs": {
+    "url": "https://github.com/redmar/node-keyring/issues"
+  }
+}
