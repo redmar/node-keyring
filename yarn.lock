@@ -7,6 +7,21 @@ cargo-cp-artifact@^0.1:
   resolved "https://registry.yarnpkg.com/cargo-cp-artifact/-/cargo-cp-artifact-0.1.6.tgz#df1bc9dad036ae0f4230639a869182e1d5850f89"
   integrity sha512-CQw0doK/aaF7j041666XzuilHxqMxaKkn+I5vmBsd8SAwS0cO5CqVEVp0xJwOKstyqWZ6WK4Ww3O6p26x/Goyg==
 
+node-keyring-darwin-universal@^0.4.0:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/node-keyring-darwin-universal/-/node-keyring-darwin-universal-0.4.3.tgz#b6801d3d81915a47ab52771e34b734a4aa4e0eb2"
+  integrity sha512-T0f2i7j47YET+CWymRstsmhTox4hKkGGgiWjtBVd5QCsROmvPIdK3KqNlO7sck9JQEAfLreCeXdMVttZf3eGLg==
+
+node-keyring-linux-x64-gnu@^0.4.0:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/node-keyring-linux-x64-gnu/-/node-keyring-linux-x64-gnu-0.4.1.tgz#324bac102fb30ff565bea9878f0c17eaf816e68d"
+  integrity sha512-al+ySCTrkW5/Fyfxu2QY8rqrB40ViBc81yqyWebLmYkn//fsC4HbVmAHRuj1tE+gfovQaRyCdymIKl0ye2y/ng==
+
+node-keyring-win32-x64-msvc@^0.4.0:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/node-keyring-win32-x64-msvc/-/node-keyring-win32-x64-msvc-0.4.1.tgz#f51cb818922f25f9ee0296add16de48af7b191e3"
+  integrity sha512-G9A/OD3/Yxp5VoRPRu6SSDEbSr4VmFOa3rfjULpk8HAKAvkbWO2zjhNxFlbCMZuznEdijxcl9eLaZMkU7YAffA==
+
 run-script-os@^1.1.6:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/run-script-os/-/run-script-os-1.1.6.tgz#8b0177fb1b54c99a670f95c7fdc54f18b9c72347"
